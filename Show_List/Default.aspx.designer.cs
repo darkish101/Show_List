@@ -15,30 +15,12 @@ namespace Show_List
     {
 
         /// <summary>
-        /// ddlLang control.
+        /// rpShows control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlLang;
-
-        /// <summary>
-        /// btnLang control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnLang;
-
-        /// <summary>
-        /// rpAnimes control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rpAnimes;
+        protected global::System.Web.UI.WebControls.Repeater rpShows;
     }
 }

@@ -5,8 +5,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <div class="container-fluid tm-container-content tm-mt-60">
-    <asp:DropDownList runat="server" ID="ddlLang" OnSelectedIndexChanged="ddlLang_SelectedIndexChanged" AutoPostBack="true" CssClass="form-control col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5"></asp:DropDownList>
-    <asp:LinkButton runat="server" ID="btnLang" OnClick="btnLang_Click" Text="تغيير اللغة"></asp:LinkButton>
+<%--    <asp:DropDownList runat="server" ID="ddlLang" OnSelectedIndexChanged="ddlLang_SelectedIndexChanged" AutoPostBack="true" CssClass="form-control col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5"></asp:DropDownList>
+    <asp:LinkButton runat="server" ID="btnLang" OnClick="btnLang_Click" Text="تغيير اللغة"></asp:LinkButton>--%>
     </div>
 
     <div class="container-fluid tm-container-content tm-mt-60">
@@ -23,15 +23,15 @@
 
         <div class="row tm-mb-90 tm-gallery">
 
-            <asp:Repeater runat="server" ID="rpAnimes" >
+            <asp:Repeater runat="server" ID="rpShows" >
                 <ItemTemplate>
 
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
                 <figure class="effect-ming tm-video-item">
                     <img src='<%# Eval("Img_URL") %>' alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
-                        <h2><%# Eval("Anime_Name") %></h2>
-                        <a href='<%# "AnimePage.aspx?AnimeID=" + Eval("Anime_ID") %>'>View more</a>
+                        <h2><%# Eval("Show_Name") %></h2>
+                        <a href='<%# "AnimePage.aspx?AnimeID=" + Eval("Show_ID") %>'>View more</a>
                     </figcaption>
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">

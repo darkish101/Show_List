@@ -23,6 +23,7 @@
         <div class="loader-section section-right"></div>
 
     </div>
+    <asp:LinkButton runat="server" ID="btnLang" OnClick="btnLang_Click" Visible="false" Text="تغيير اللغة"></asp:LinkButton>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -32,6 +33,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
+            <asp:DropDownList runat="server" ID="ddlLang" OnSelectedIndexChanged="ddlLang_SelectedIndexChanged" AutoPostBack="true" CssClass="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5"></asp:DropDownList>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                 <li class="nav-item">
