@@ -31,7 +31,7 @@
                     <img src='<%# Eval("Img_URL") %>' alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2><%# Eval("Show_Name") %></h2>
-                        <a href='<%# "AnimePage.aspx?AnimeID=" + Eval("Show_ID") %>'>View more</a>
+                        <a href='<%# "Show_Page.aspx?AnimeID=" + Eval("Show_ID") %>'>View more</a>
                     </figcaption>
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">

@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Show_Page.aspx.cs" Inherits="Show_List.Show_Page" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -6,31 +7,32 @@
 
     <div class="container-fluid tm-container-content tm-mt-60">
         <div class="row mb-4">
-            <h2 class="col-12 tm-text-primary">Photo title goes here</h2>
+            <h2 runat="server" id="h2ShowTitle" class="col-12 tm-text-primary"></h2>
         </div>
-        <div class="row tm-mb-90">            
+        <div class="row tm-mb-90">
             <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
-                <img src="img/img-01-big.jpg" alt="Image" class="img-fluid">
+                <img runat="server" id="imgShowImage" src="img/img-01-big.jpg" alt="Image" class="img-fluid">
             </div>
             <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
                 <div class="tm-bg-gray tm-video-details">
-                    <p class="mb-4">
+                 <%--   <p class="mb-4">
                         Please support us by making <a href="https://paypal.me/templatemo" target="_parent" rel="sponsored">a PayPal donation</a>. Nam ex nibh, efficitur eget libero ut, placerat aliquet justo. Cras nec varius leo.
-                    </p>
+                    </p>--%>
                     <div class="text-center mb-5">
-                        <a href="#" class="btn btn-primary tm-btn-big">Download</a>
-                    </div>                    
+                        <asp:Label runat="server" ID="lblEpisods" CssClass=" btn-primary tm-btn-big">2222</asp:Label>
+                        <%--<a href="#" class="btn btn-primary tm-btn-big">Download</a>--%>
+                    </div>
                     <div class="mb-4 d-flex flex-wrap">
                         <div class="mr-4 mb-2">
-                            <span class="tm-text-gray-dark">Dimension: </span><span class="tm-text-primary">1920x1080</span>
+                          <span class="tm-text-gray-dark">All Episods: </span><span runat="server" id="sAllEpisods" class="tm-text-primary"></span>
                         </div>
                         <div class="mr-4 mb-2">
-                            <span class="tm-text-gray-dark">Format: </span><span class="tm-text-primary">JPG</span>
+                            <span class="tm-text-gray-dark">Seen: </span><span runat="server" id="sSeen" class="tm-text-primary">1920x1080</span>
                         </div>
                     </div>
                     <div class="mb-4">
-                        <h3 class="tm-text-gray-dark mb-3">License</h3>
-                        <p>Free for both personal and commercial use. No need to pay anything. No need to make any attribution.</p>
+                        <h3 class="tm-text-gray-dark mb-3">Descripton</h3>
+                        <p runat="server" id="pDescription">Free for both personal and commercial use. No need to pay anything. No need to make any attribution.</p>
                     </div>
                     <div>
                         <h3 class="tm-text-gray-dark mb-3">Tags</h3>
@@ -46,8 +48,7 @@
             </div>
         </div>
         <div class="row mb-4">
-            <h2 class="col-12 tm-text-primary">
-                Related Photos
+            <h2 class="col-12 tm-text-primary">Related Photos
             </h2>
         </div>
         <div class="row mb-3 tm-gallery">
@@ -57,7 +58,7 @@
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Hangers</h2>
                         <a href="#">View more</a>
-                    </figcaption>                    
+                    </figcaption>
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
                     <span class="tm-text-gray-light">16 Oct 2020</span>
@@ -70,7 +71,7 @@
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Perfumes</h2>
                         <a href="#">View more</a>
-                    </figcaption>                    
+                    </figcaption>
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
                     <span class="tm-text-gray-light">12 Oct 2020</span>
@@ -83,7 +84,7 @@
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Clocks</h2>
                         <a href="#">View more</a>
-                    </figcaption>                    
+                    </figcaption>
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
                     <span class="tm-text-gray-light">8 Oct 2020</span>
@@ -96,7 +97,7 @@
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Plants</h2>
                         <a href="#">View more</a>
-                    </figcaption>                    
+                    </figcaption>
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
                     <span class="tm-text-gray-light">6 Oct 2020</span>
@@ -109,7 +110,7 @@
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Morning</h2>
                         <a href="#">View more</a>
-                    </figcaption>                    
+                    </figcaption>
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
                     <span class="tm-text-gray-light">26 Sep 2020</span>
@@ -122,7 +123,7 @@
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Pinky</h2>
                         <a href="#">View more</a>
-                    </figcaption>                    
+                    </figcaption>
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
                     <span class="tm-text-gray-light">22 Sep 2020</span>
@@ -135,7 +136,7 @@
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Bus</h2>
                         <a href="#">View more</a>
-                    </figcaption>                    
+                    </figcaption>
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
                     <span class="tm-text-gray-light">12 Sep 2020</span>
@@ -148,13 +149,15 @@
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>New York</h2>
                         <a href="#">View more</a>
-                    </figcaption>                    
+                    </figcaption>
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
                     <span class="tm-text-gray-light">4 Sep 2020</span>
                     <span>11,300 views</span>
                 </div>
-            </div>        
-        </div> <!-- row -->
-    </div> <!-- container-fluid, tm-container-content -->
+            </div>
+        </div>
+        <!-- row -->
+    </div>
+    <!-- container-fluid, tm-container-content -->
 </asp:Content>
