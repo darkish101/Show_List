@@ -1,0 +1,19 @@
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[LANGUAGE_TRANSLATION](
+	[MODULE_ID] [varchar](10) NULL,
+	[ACTIVITY_ID] [varchar](50) NULL,
+	[OBJECT_NAME] [varchar](100) NULL,
+	[LANGUAGE] [varchar](10) NULL,
+	[CONTROL_TYPE] [varchar](100) NULL,
+	[DEFAULT_LABEL] [nvarchar](4000) NULL,
+	[LABEL] [nvarchar](4000) NULL
+) ON [PRIMARY]
+GO
+
+

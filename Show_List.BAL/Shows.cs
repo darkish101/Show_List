@@ -36,13 +36,13 @@ namespace Show_List.BAL
   //WHERE (@Lang = '0' OR LT1.Lang_Code = @Lang)");
   //          return DS;
   //      }
-        public DataSet GetAllShows(string Lang = "0")
+        public DataSet GetAllShows(string Lang = "ar-SA")
         {
             SqlService sql = new SqlService();
             SqlCommand sqlcomm = new SqlCommand();
             sqlcomm.CommandType = CommandType.StoredProcedure;
             sqlcomm.Parameters.Add("@Lang", SqlDbType.NVarChar).Value = Lang;
-            sqlcomm.CommandText = "[dbo].[sp_Get_Show_By_ID]";
+            sqlcomm.CommandText = "[dbo].[sp_Get_Show_By_Language]";
             DataSet DS = sql.ExecuteSPDataSet(sqlcomm);
             return DS;
         }

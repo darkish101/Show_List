@@ -11,7 +11,7 @@
 
     <div class="container-fluid tm-container-content tm-mt-60">
         <div class="row mb-4">
-            <h2 class="col-6 tm-text-primary">Latest Photos
+            <h2 class="col-6 tm-text-primary"><asp:Label runat="server" ID="lblShows">Latest Photos</asp:Label> 
             </h2>
             <div class="col-6 d-flex justify-content-end align-items-center">
                     Page
@@ -42,6 +42,7 @@
                 </ItemTemplate>
             </asp:Repeater>
 
+            
 
           <%--  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
                 <figure class="effect-ming tm-video-item">

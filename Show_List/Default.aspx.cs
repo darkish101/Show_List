@@ -1,4 +1,5 @@
 ﻿using Show_List.BAL;
+using Show_List.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace Show_List
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class Default : PageBaseClass //System.Web.UI.Page
     {
         Languages L = new Languages();
         Shows S = new Shows();
@@ -23,6 +24,8 @@ namespace Show_List
             }
             rpShows.DataSource = S.GetAllShows(Session["Lang"].ToString());
             rpShows.DataBind();
+
+
         }
     }
 }
