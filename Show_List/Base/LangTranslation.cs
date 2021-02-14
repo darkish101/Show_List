@@ -92,6 +92,13 @@ namespace Show_List.Base
                     vControlType = literal.GetType().ToString();
                     vDefaultLabel = literal.Text;
                 }
+                //else if (C is LiteralControl)
+                //{
+                //    var literal = (LiteralControl)C;
+                //    vObjectName = C.ID;
+                //    vControlType = literal.GetType().ToString();
+                //    vDefaultLabel = literal.Text;
+                //} 
                 else if (C is Button)
                 {
                     var button = (Button)C;
@@ -103,7 +110,25 @@ namespace Show_List.Base
                 else if (C is Repeater)
                 {
                     var repeater = (Repeater)C;
+                    C.Load += new EventHandler(C_RepeterViewLoad);
                     repeater.ItemDataBound += new RepeaterItemEventHandler(repeater_ItemDataBoundReadControl);
+                    //foreach(RepeaterItem item in repeater.Items)
+                    //{
+                    //    if (item.Controls[0] is Literal)
+                    //    {
+                    //        var literal = (Literal)C;
+                    //        vObjectName = C.ID;
+                    //        vControlType = literal.GetType().ToString();
+                    //        vDefaultLabel = literal.Text;
+                    //    }
+                    //    if (item.ItemType is Literal)
+                    //    {
+                    //        var literal = (Literal)C;
+                    //        vObjectName = C.ID;
+                    //        vControlType = literal.GetType().ToString();
+                    //        vDefaultLabel = literal.Text;
+                    //    }
+                    //}
                 }
                 else if (C is GridView)
                 {
@@ -190,6 +215,13 @@ namespace Show_List.Base
         void C_GridViewLoad(object sender, EventArgs e)
         {
             GridView dv = (GridView)sender;
+            if (dv.HasControls())
+                ReadControl(dv.Controls);
+
+        }
+        void C_RepeterViewLoad(object sender, EventArgs e)
+        {
+            Repeater dv = (Repeater)sender;
             if (dv.HasControls())
                 ReadControl(dv.Controls);
 

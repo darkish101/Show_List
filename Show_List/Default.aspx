@@ -25,25 +25,22 @@
 
             <asp:Repeater runat="server" ID="rpShows" >
                 <ItemTemplate>
-
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
                 <figure class="effect-ming tm-video-item">
                     <img src='<%# Eval("Img_URL") %>' alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2><%# Eval("Show_Name") %></h2>
-                        <a href='<%# "Show_Page.aspx?AnimeID=" + Eval("Show_ID") %>'>View more</a>
+                        <a href='<%# "Show_Page.aspx?Show_Id=" + Eval("Show_ID") %>'><asp:Literal runat="server" ID="ltrpViewMore">View more</asp:Literal></a>
                     </figcaption>
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
                     <span class="tm-text-gray-light"><%# Eval("Added_Date") %></span>
-                    <span><%# Eval("Episodes") %> Episode</span>
+                    <span><%# Eval("Episodes") %> <asp:Literal runat="server" ID="ltrrpEpisode">Episode</asp:Literal></span>
                 </div>
             </div>
                 </ItemTemplate>
             </asp:Repeater>
-
-            
-
+            <asp:Button runat="server" ID="btnTest" Text="test" CssClass="btn btn-primary" />
           <%--  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
                 <figure class="effect-ming tm-video-item">
                     <img src="assets/img/img-03.jpg" alt="Image" class="img-fluid">
