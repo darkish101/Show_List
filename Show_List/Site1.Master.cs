@@ -81,6 +81,8 @@ namespace Show_List
 
              else if (ddlLang.SelectedValue == "fr-FR")
                 CommonMethods.AddCookie("Site_Language", ddlLang.SelectedValue, DateTime.Now.AddMonths(12));
+             
+             Response.Redirect(Request.RawUrl);
         }
         //protected void btnLang_Click(object sender, EventArgs e)
         //{
